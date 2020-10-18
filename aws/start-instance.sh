@@ -1,5 +1,5 @@
 #!/bin/bash
 
-yourinstanceid=i-0400050a4c22add3c
+yourinstanceid=i-0fae8bdd94c5e8f84
 #yourinstanceid=$1
 aws ec2 start-instances --instance-ids $yourinstanceid

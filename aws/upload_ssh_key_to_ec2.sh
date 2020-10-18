@@ -1,7 +1,7 @@
 #!/bin/bash
 
 keypair=$USER  # or some name that is meaningful to you
-publickeyfile=$HOME/.ssh/id_rsa.pub
+publickeyfile=$HOME/.ssh/yannik.pub
 regions=$(aws ec2 describe-regions \
   --output text \
   --query 'Regions[*].RegionName')

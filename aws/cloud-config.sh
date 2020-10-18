@@ -1,7 +1,7 @@
 #!/bin/bash
 
 username=yannik
-ami_id=ami-0e6b2b4ff9072b5a6 # Ubuntu 18.04 Deep Learning AMI
+ami_id=ami-03f3f060b06578a2d # Ubuntu 18.04 Deep Learning AMI
 user_data_file=$(mktemp /tmp/user-data-XXXX.txt)
 
 cat <<EOF >$user_data_file
@@ -11,7 +11,7 @@ system_info:
     name: $username
 EOF
 
-instance_id=$(aws ec2 run-instances --user-data file://$user_data_file --key-name $USER --image-id $ami_id --instance-type c5n.large --output text --query 'Instances[*].InstanceId')
+instance_id=$(aws ec2 run-instances --user-data file://$user_data_file --key-name $USER --image-id $ami_id --instance-type c3.4xlarge --output text --query 'Instances[*].InstanceId')
 rm $user_data_file
 echo instance_id=$instance_id
 
