@@ -2,7 +2,7 @@
 
 echo "Adding PPAs"
 
-echo ”deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/” > /etc/apt/sources.list.d/cran.list
+echo "deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/" > /etc/apt/sources.list.d/cran.list
 add-apt-repository -y ppa:c2d4u.team/c2d4u4.0+
 add-apt-repository -y ppa:git-core/ppa
 add-apt-repository -y ppa:kelleyk/emacs
